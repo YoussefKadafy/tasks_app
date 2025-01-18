@@ -26,14 +26,14 @@ class LoanApprovedCard extends StatelessWidget {
                       'Одобрен кредит у ',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 30,
+                          fontSize: 24,
                           color: Colors.white),
                     ),
                     const Text(
                       'наших партнеров',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 30,
+                          fontSize: 24,
                           color: Colors.white),
                     ),
                     const SizedBox(
@@ -48,7 +48,8 @@ class LoanApprovedCard extends StatelessWidget {
                       child: const CustomRowText(
                         prefixText: 'Сумма займа',
                         suffexText: '12000 ₽',
-                        fontSize: 30,
+                        suffixFontSize: 24,
+                        prefixFontSize: 18,
                       ),
                     ),
                     const CustomRowText(
@@ -73,7 +74,7 @@ class LoanApprovedCard extends StatelessWidget {
             child: Container(
               height: 95,
               width: 95,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(colors: [
                   Colors.white,

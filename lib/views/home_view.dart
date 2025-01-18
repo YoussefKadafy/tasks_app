@@ -8,16 +8,13 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: CustomAppBar(),
-            ),
-            Container(
+            CustomAppBar(),
+            SizedBox(
               width: double.infinity,
               child: Card(
                 elevation: 8,
@@ -25,11 +22,11 @@ class HomeView extends StatelessWidget {
                   height: 60,
                   child: Center(
                     child: Padding(
-                      padding: const EdgeInsets.only(right: 40),
+                      padding: EdgeInsets.only(right: 40),
                       child: Text(
                         'Иванов Иван Иванович',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                            fontWeight: FontWeight.bold, fontSize: 24),
                       ),
                     ),
                   ),
@@ -38,7 +35,7 @@ class HomeView extends StatelessWidget {
             ),
             CustomActiveCredit(),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              padding: EdgeInsets.symmetric(vertical: 16.0),
               child: LoanApprovedCard(),
             ),
           ],

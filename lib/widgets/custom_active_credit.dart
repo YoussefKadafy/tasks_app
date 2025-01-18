@@ -33,7 +33,7 @@ class CustomActiveCredit extends StatelessWidget {
                 child: const CustomRowText(
                   prefixText: 'Основной долг',
                   suffexText: '8000 ₽',
-                  fontSize: 30,
+                  suffixFontSize: 24,
                 ),
               ),
               const CustomRowText(prefixText: 'Проценты', suffexText: '0 ₽'),

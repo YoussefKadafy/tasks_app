@@ -6,11 +6,14 @@ class CustomRowText extends StatelessWidget {
       this.fontWeight = FontWeight.bold,
       required this.prefixText,
       required this.suffexText,
-      this.fontSize = 20,
+      this.prefixFontSize = 18,
+      this.suffixFontSize = 18,
       this.color = Colors.black});
   final String prefixText, suffexText;
   final FontWeight fontWeight;
-  final double fontSize;
+  final double prefixFontSize;
+  final double suffixFontSize;
+
   final Color color;
 
   @override
@@ -23,14 +26,14 @@ class CustomRowText extends StatelessWidget {
           Text(
             prefixText,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: prefixFontSize,
               color: color,
             ),
           ),
           Text(
             suffexText,
             style: TextStyle(
-                fontSize: fontSize, fontWeight: fontWeight, color: color),
+                fontSize: suffixFontSize, fontWeight: fontWeight, color: color),
           ),
         ],
       ),
