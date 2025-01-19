@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tasks_app/widgets/custom_bottun.dart';
 import 'package:tasks_app/widgets/custom_row_text.dart';
 
-class LoanApprovedCard extends StatelessWidget {
-  const LoanApprovedCard({super.key});
+class TakeAdvantage extends StatelessWidget {
+  const TakeAdvantage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,6 @@ class LoanApprovedCard extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: Card(
-              color: const Color(0xff714C9F),
               elevation: 8,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -23,14 +22,14 @@ class LoanApprovedCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Одобрен кредит у \nнаших партнеров',
+                      'Воспользуйтесь',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 24,
-                          color: Colors.white),
+                          color: Colors.black),
                     ),
                     const SizedBox(
-                      height: 24,
+                      height: 48,
                     ),
                     Container(
                       decoration: BoxDecoration(
@@ -40,25 +39,18 @@ class LoanApprovedCard extends StatelessWidget {
                       width: double.infinity,
                       child: const CustomRowText(
                         prefixText: 'Сумма займа',
-                        suffexText: '12000 ₽',
+                        suffexText: 'до 25 000 ₽',
                         suffixFontSize: 24,
-                        prefixFontSize: 18,
                       ),
                     ),
                     const CustomRowText(
                       prefixText: 'Проценты',
-                      suffexText: '1344 ₽',
-                      color: Colors.white,
-                    ),
-                    const CustomRowText(
-                      color: Colors.white,
-                      prefixText: 'Дата возврата',
-                      suffexText: '09.08.2024',
+                      suffexText: '0,8%',
                     ),
                     CustomButton(
                       text: 'Получить',
                       onPressed: () {},
-                      backgroundColor: const Color(0xffFF9800),
+                      textColor: Colors.white,
                     ),
                   ],
                 ),
@@ -75,23 +67,35 @@ class LoanApprovedCard extends StatelessWidget {
                 shape: BoxShape.circle,
                 gradient: LinearGradient(colors: [
                   Colors.white,
-                  Color(0xffD8C5F0),
-                  Color(0xffCCB6E9),
-                  Color(0xffC2A8E3),
+                  Color(0xffFFDBA5),
+                  Color(0xffFFC97A),
+                  Color(0xffFFB84E),
+                  Color(0xffFF9E0F),
                 ], begin: Alignment.topLeft, end: Alignment.bottomLeft),
               ),
             ),
           ),
           Positioned(
-            right: 18,
-            top: -30,
+            right: 22,
+            top: -25,
             child: Image.asset(
-              height: 110,
-              width: 100,
-              'assets/images/Depositphotos_376582 1.png',
+              height: 97,
+              width: 92,
+              'assets/images/bank-building-with-coins-pink-background-online-banking-bank-transactions-service-moneysaving-bank-finance-financial-business-money-transaction-savings-concept-3d-render-illustration 1.png',
               fit: BoxFit.cover,
             ),
           ),
+          const Positioned(
+            left: 20,
+            top: 50,
+            child: Text(
+              'новым предложением!',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              ),
+            ),
+          )
         ],
       ),
     );

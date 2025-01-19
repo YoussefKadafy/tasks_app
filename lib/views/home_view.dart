@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tasks_app/widgets/custom_active_credit.dart';
 import 'package:tasks_app/widgets/custom_app_bar.dart';
 import 'package:tasks_app/widgets/loan_approved.dart';
+import 'package:tasks_app/widgets/offers_and_decuments.dart';
+import 'package:tasks_app/widgets/paying_loan.dart';
+import 'package:tasks_app/widgets/presentation.dart';
+import 'package:tasks_app/widgets/take_advantage.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -38,6 +42,10 @@ class HomeView extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: LoanApprovedCard(),
             ),
+            TakeAdvantage(),
+            OffersAndDocuments(),
+            PayingLoan(),
+            Presentation(),
           ],
         ),
       ),

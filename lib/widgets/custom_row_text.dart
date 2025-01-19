@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class CustomRowText extends StatelessWidget {
   const CustomRowText(
       {super.key,
-      this.fontWeight = FontWeight.bold,
+      this.fontWeight = FontWeight.w700,
       required this.prefixText,
       required this.suffexText,
-      this.prefixFontSize = 18,
-      this.suffixFontSize = 18,
+      this.prefixFontSize = 14,
+      this.suffixFontSize = 14,
       this.color = Colors.black});
   final String prefixText, suffexText;
   final FontWeight fontWeight;
